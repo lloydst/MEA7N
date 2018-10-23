@@ -1,5 +1,20 @@
 # Ng7
-This boiler plate has a slightly different scss setup instead of using the scss files generated with the component there is a folder in the src called scss. this is where you would import your other scss files. this method means you dont have to declare your scss over and over again. if you want to use it between components. it also alows for a scss 'best practise' 7-1 file setup for your scss files.
+
+## description
+This boiler plate is meant as a quick start for setting up new Mean-stack applications
+
+ > prereqisites:
+ node js, v8+
+ either a mlab account for a cloud setup of your data base, or a local installation of Mongo.
+
+## setting up
+pull this repository: `git pull https://github.com/lloydst/MEA7N.git .` the '.' is only required if you are in the folder you want as your project root.
+After that is done make shure you are in the projects root and run `npm install` that will install all your packages. then you have to run `ng build` to build a very basic angular 7 app. at that point you can start the nodejs/express server with `npm start`
+
+## development
+run the server in development with hot-reload `npm run start-dev`,
+and build the angular app on changes `ng build --watch`. it is best to run both of these commands at the same same time in diferent console's. styling updates made to src/scss will affect the ng build --watch command as well thus by passing the need for grunt and the like.
+
 
 ## standard ng cli stuff below
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
