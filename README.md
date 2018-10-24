@@ -4,8 +4,8 @@
 This boiler plate is meant as a quick start for setting up new Mean-stack applications
 
  > prereqisites:
- node js, v8+
- either a mlab account for a cloud setup of your data base, or a local installation of Mongo.
+ node js, v8+ (angular 7 has node v.10 support)
+ either a mlab account for a cloud setup of your data base, or a local installation of MongoDB.
 
 ## setting up
 pull this repository: `git pull https://github.com/lloydst/MEA7N.git .` the '.' is only required if you are in the folder you want as your project root.
@@ -42,3 +42,37 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Optional
+### State
+install ngrx and add ngrx schematics to your angular cli (in this project)
+ - `npm install @ngrx/schematics --save-dev`
+ - `ng config cli.defaultCollection @ngrx/schematics`
+ - install ngrx packages:
+
+    `npm install @ngrx/store @ngrx/effects @ngrx/store-devtools @ngrx/router-store –save npm install @ngrx/schematics --save-dev`
+ - generate store folder in app folder with 'root' reducer
+
+    `ng generate store State --root --statePath store/reducers --module app.module.ts`
+ - fix the environment import in the app.module.ts file.
+
+commands for creating a store:
+ - action:
+
+ `ng generate action store/actions/${name} --actions index.ts`
+ - reducer:
+
+ `ng generate reducer store/reducers/${name} --reducers index.ts`
+ - effects:
+
+ `ng generate effect store/effects/${name} --module app.module --root true`
+
+ commonly used imports in a effect file are:
+ - `import { Injectable } from '@angular/core';`
+ - `import { Actions, Effect, ofType } from '@ngrx/effects';`
+ - `import { Observable } from 'rxjs';`
+ - `import { HttpClient } from '@angular/common/http';`
+ - `import * as authActions from '../actions/auth.actions';` (this one has to be changed ofc)
+ - `import { Action } from '@ngrx/store';`
+ - `import { switchMap, map } from 'rxjs/operators';`
+
