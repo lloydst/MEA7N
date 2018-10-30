@@ -1,6 +1,8 @@
 {
   "name": "ng7tester",
   "version": "0.0.0",
+  "author": "Lloyd stumpel",
+  "repository": "https://github.com/lloydst/MEA7N",
   "scripts": {
     "ng": "ng",
     "start": "node ./server/bin/www",

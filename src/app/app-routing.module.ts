@@ -11,12 +11,10 @@ const routes: Routes = [
     },
     {
         path: 'lazy',
-        //component: AppComponent,
         loadChildren: './lazy/lazy.module#LazyModule',
     },
     {
         path: 'active',
-        //component: AppComponent,
         children: [
             { path: '', component:ActiveComponent}]
     },

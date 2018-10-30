@@ -15,6 +15,8 @@ After that is done make shure you are in the projects root and run `npm install`
 run the server in development with hot-reload `npm run start-dev`,
 and build the angular app on changes `ng build --watch`. it is best to run both of these commands at the same same time in diferent console's. styling updates made to src/scss will affect the ng build --watch command as well thus by passing the need for grunt and the like.
 
+## style
+the style is setup in slightly different way then normal. it still gets compiled from scss too css thanks too the cli but thanks to the way it is setup now it is easer to implement the BEM method/ 7-1 folder structure.
 
 ## standard ng cli stuff below
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
@@ -44,6 +46,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Optional
+
 ### State
 install ngrx and add ngrx schematics to your angular cli (in this project)
  - `npm install @ngrx/schematics --save-dev`
